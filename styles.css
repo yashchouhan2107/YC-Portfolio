@@ -183,6 +183,18 @@ body.dark-mode .logo-img {
     gap: 2rem;
 }
 
+@keyframes profile-float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .hero-profile {
     width: 200px;
     height: 200px;
@@ -190,6 +202,7 @@ body.dark-mode .logo-img {
     padding: 8px; /* Space for inset shadow */
     box-shadow: var(--neu-inset);
     background-color: var(--bg-color);
+    animation: profile-float 4s ease-in-out infinite;
 }
 
 .profile-img {
@@ -198,6 +211,12 @@ body.dark-mode .logo-img {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: var(--neu-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--neu-shadow-hover);
 }
 
 .hero h1 {
