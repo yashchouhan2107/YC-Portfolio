@@ -177,6 +177,27 @@ body.dark-mode .logo-img {
 .hero {
     text-align: center;
     padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 8px; /* Space for inset shadow */
+    box-shadow: var(--neu-inset);
+    background-color: var(--bg-color);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--neu-shadow);
 }
 
 .hero h1 {
